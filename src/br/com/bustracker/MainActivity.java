@@ -1,10 +1,12 @@
 package br.com.bustracker;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -16,8 +18,12 @@ public class MainActivity extends Activity {
 		final Button button = (Button) findViewById(R.id.btnTracker);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	int x = 2;            	
-                // Perform action on click
+            	Context context = getApplicationContext();
+            	CharSequence text = "Hello toast!";
+            	int duration = Toast.LENGTH_SHORT;
+
+            	Toast toast = Toast.makeText(context, text, duration);
+            	toast.show();
             }
         });
 	}
