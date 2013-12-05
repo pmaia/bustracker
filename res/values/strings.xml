@@ -5,4 +5,11 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
+    <string-array name="bus_lines">
+        <item>Abreu e Lima/Olinda</item>
+        <item>Abreu e Lima/Paulista</item>
+    </string-array>
+
+    <string name="title_activity_tracking">TrackingActivity</string>
+
 </resources>

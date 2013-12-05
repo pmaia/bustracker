@@ -10,18 +10,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ônibus"
+        android:text="Tracking"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Spinner
-        android:id="@+id/spnBusLines"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnTracker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rastrear Rota" />
 
 </LinearLayout>
