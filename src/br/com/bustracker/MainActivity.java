@@ -15,6 +15,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		initializeButton();
+		initializeSpinner();
+
+	}
+
+	private void initializeButton() {
 		final Button button = (Button) findViewById(R.id.btnTracker);
 		button.setOnClickListener(new View.OnClickListener() {
 
@@ -24,7 +31,9 @@ public class MainActivity extends Activity {
 			}
 
 		});
+	}
 
+	private void initializeSpinner() {
 		/* Spinner */
 		Spinner spinner = (Spinner) findViewById(R.id.spnBusLines);
 		// Create an ArrayAdapter using the string array and a default spinner layout
