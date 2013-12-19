@@ -27,14 +27,14 @@ public class MainActivity extends Activity {
 
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), TrackingActivity.class);
+				intent.putExtra("routeName", getRouteName());
 				startActivity(intent);
 			}
 
 		});
 	}
 
-	private void initializeSpinner() {
-		/* Spinner */
+	private void initializeSpinner() {		
 		Spinner spinner = (Spinner) findViewById(R.id.spnBusLines);
 		// Create an ArrayAdapter using the string array and a default spinner layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -48,6 +48,11 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		return true;
+	}
+	
+	private String getRouteName() {
+		Spinner spinner = (Spinner) findViewById(R.id.spnBusLines);
+		return spinner.getSelectedItem().toString();
 	}
 
 }
